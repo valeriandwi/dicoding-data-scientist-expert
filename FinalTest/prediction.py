@@ -14,7 +14,7 @@ def prediction(data):
     Returns:
         str: Prediction result (Good, Standard, or Poor)
     """
-    result = model.predict(data)
+    # result = model.predict(data)
 
-    final_result = result_target.inverse_transform(result)[0]
-    return final_result
+    # final_result = result_target.inverse_transform(result)[0]
+    # return final_result
