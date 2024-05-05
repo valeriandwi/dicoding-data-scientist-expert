@@ -110,5 +110,5 @@ def data_preprocessing(data):
     data["GDP"] = scaler_GDP.transform(np.asarray(data["GDP"]).reshape(-1,1))[0]
 
     df[["pc2_1", "pc2_2"]] = pca_2.transform(data[pca_numerical_columns_2])
-        
+    
     return df
