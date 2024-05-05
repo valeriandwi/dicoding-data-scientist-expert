@@ -1,5 +1,4 @@
 import joblib
-import sklearn
 
 model = joblib.load("model/gboost_model.joblib")
 result_target = joblib.load("model/encoder_target.joblib")
@@ -13,7 +12,8 @@ def prediction(data):
     Returns:
         str: Prediction result (Good, Standard, or Poor)
     """
-    # result = model.predict(data)
+    result = model.predict(data.values)
+    final_result = result_target.inverse_transform(result)[0]
 
-    # final_result = result_target.inverse_transform(result)[0]
-    # return final_result
+    print(final_result)
+    return final_result
