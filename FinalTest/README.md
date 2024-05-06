@@ -86,11 +86,18 @@ Adapun beberapa faktor yang dapat dilihat melalui dashboard yang dibuat, antara 
 
 ## Menjalankan Sistem Machine Learning
 
-Jelaskan cara menjalankan protoype sistem machine learning yang telah dibuat. Selain itu, sertakan juga link untuk mengakses prototype tersebut.
+<picture>
+<img src="https://github.com/valeriandwi/dicoding-data-scientist-expert/blob/main/FinalTest/assets/prediction.png?raw=true">
+</picture>
 
-```
+Sistem prediksi yang dibangun menggunakan machine learning menggunakan Gradient Boosting model.
+Data siswa yang sudah dimasukan akan diolah untuk diprediksi statusnya dengan status antara lain :
 
-```
+1. Graduate : Siswa memiliki status lulus
+2. Enrolled : Siswa yang masih aktif menjalani akademik
+3. Dropout : Siswa yang sudah keluar dari kegiatan akademisi
+
+Sistem prediksi ini dapat dilihat pada link berikut :
 
 ## Conclusion
 
