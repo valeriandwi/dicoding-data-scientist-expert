@@ -98,6 +98,7 @@ Data siswa yang sudah dimasukan akan diolah untuk diprediksi statusnya dengan st
 3. Dropout : Siswa yang sudah keluar dari kegiatan akademisi
 
 Sistem prediksi ini dapat dilihat pada link berikut :
+https://institution-valerian.streamlit.app/
 
 ## Conclusion
 
