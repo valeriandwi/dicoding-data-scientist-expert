@@ -126,6 +126,10 @@ Untuk mendalami dan memprediksi siswa yang rentan mengalami dropout, penulis mem
 
 Sehingga didapatkan bahwa model yang cocok untuk prediksi pada proyek ini yaitu Gradient Boosting. Dimana model tersebut menggunakan pc1_1 sebagai fitur utama dalam menghasilkan sebuah prediksi.
 
+<picture>
+<img src="https://github.com/valeriandwi/dicoding-data-scientist-expert/blob/main/FinalTest/assets/gboost_feature.png?raw=true">
+</picture>
+
 ### Rekomendasi Action Items
 
 Berdasarkan data yang sudah dianalisis, didapatkan bahwa Jaya Jaya institusi dapat melakukan beberapa aksi untuk mencegah siswa mengalami dropout : </br>
