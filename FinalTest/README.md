@@ -67,6 +67,23 @@ docker run -p 3000:3000 --name metabase metabase/metabase
 
 ## Business Dashboard
 
+<picture>
+<img src=https://github.com/valeriandwi/dicoding-data-scientist-expert/blob/main/FinalTest/dashboard.png?raw=true>
+</picture>
+
+Pada Jaya Jaya Institut terdapat total 4424 siswa, dimana 1421 siswa sudah dinyatakan dropout. Dimana rata-rata siswa dropout memiliki angka penggagurannya cukup besar yaitu 11.62%.
+
+Adapun beberapa faktor yang dapat dilihat melalui dashboard yang dibuat, antara lain :
+
+1. Debtor : siswa yang melakukan pinjaman dari orang atau instansi lain dapat mengakibatkan dropout. Tindakan ini dapat mengakibatkan siswa mengalami financial stress, kesulitan mendapatkan resources seperti buku, bahan studi, atau teknologi, dan yang terakhir yaitu siswa akan rentan terhadap mental issue yang mengakibatkan ketakutan, depresi, dan merasa kekurangan harapan.
+2. Umur : siswa yang masih usia-usia awal masuk institut yaitu rentan usia 18 - 20 lebih banyak melakukan atau terkena dropout.
+3. Kategori aplikasi : Siswa yang mendaftar untuk kategori aplikasi siswa yang diatas umur 23 tahun banyak mengalami dropout
+4. Terdapat kolerasi antara Admission grade ( nilai masuk minimal pada program studi tertentu ) dan jumlah kurikulum yang diambil siswa pada semester 1 dan 2. Rata-rata siswa yang mengambil program studi yang memerlukan nilai tidak terlalu besar dan jumlah kurikulum yang kecil mengalami dropout.
+5. Program studi management di kelas regular dan karyawan merupakan program studi yang memiliki jumlah siswa dropout terbanyak.
+6. Siswa pada usia muda lebih memilih untuk mengambil jumlah kurikulum sedikit pada setiap semesternya
+7. Tingkat lulusan : Siswa yang baru lulus tingkat akhir (SMA) lebih rentan mengalami dropout
+8. GDP : Siswa yang mempunyai nilai GDP kecil lebih rentan mengalami dropout
+
 ## Menjalankan Sistem Machine Learning
 
 Jelaskan cara menjalankan protoype sistem machine learning yang telah dibuat. Selain itu, sertakan juga link untuk mengakses prototype tersebut.
@@ -77,11 +94,44 @@ Jelaskan cara menjalankan protoype sistem machine learning yang telah dibuat. Se
 
 ## Conclusion
 
-Jelaskan konklusi dari proyek yang dikerjakan.
+Terdapat berbagai faktor yang dapat mengakibatkan siswa mengalami dropout :
+
+1. Finansial : siswa yang memiliki finansial yang buruk lebih rentan mengalami dropout. Keterlambatan dalam membayar juga dapat mengakibatkannya. Data ini dapat juga terlihat melalui nilai rata-rata keseluruhan GDP siswa yang dropout.
+2. Program studi : program studi dengan jumlah siswa terbanyak lebih banyak mengalami dropout.
+3. Beasiswa : walau tidak banyak berpengaruh, namun perlu diperhatikan kembali oleh instansi bahwa sasaran siswa yang mendapatkan beasiswa itu harus tepat.
+4. Usia : usia muda lebih rentan mengalami dropout
+5. Jumlah kurikulum : Siswa dengan jumlah kurikulum yang diambil lebih rentan mengalami dropout
+
+Untuk mendalami dan memprediksi siswa yang rentan mengalami dropout, penulis membangun sebuah model machine learning menggunakan beberapa model dan beberapa feature data numerik yang dipakai diantaranya :
+
+- Curricular_units_1st_sem_enrolled
+- Curricular_units_1st_sem_evaluations
+- Curricular_units_1st_sem_approved
+- Curricular_units_1st_sem_grade
+- Curricular_units_2nd_sem_enrolled
+- Curricular_units_2nd_sem_evaluations
+- Curricular_units_2nd_sem_approved
+- Curricular_units_2nd_sem_grade
+- Application_order
+- Age_at_enrollment
+- Unemployment_rate
+- Inflation_rate
+- GDP
+
+1. Logistic Regression (accuracy : 68%)
+2. Decision Tree (accuracy : 66%)
+3. Random Forest (accuracy : 73%)
+4. Gradient Boosting (accuracy : 77%)
+5. XGBClassifier (accuracy : 76%)
+
+Sehingga didapatkan bahwa model yang cocok untuk prediksi pada proyek ini yaitu Gradient Boosting. Dimana model tersebut menggunakan pc1_1 sebagai fitur utama dalam menghasilkan sebuah prediksi.
 
 ### Rekomendasi Action Items
 
-Berikan beberapa rekomendasi action items yang harus dilakukan perusahaan guna menyelesaikan permasalahan atau mencapai target mereka.
+Berdasarkan data yang sudah dianalisis, didapatkan bahwa Jaya Jaya institusi dapat melakukan beberapa aksi untuk mencegah siswa mengalami dropout : </br>
 
-- action item 1
-- action item 2
+1. Analisis Kinerja Akademik: Tinjau data mengenai mata kuliah yang diambil, kehadiran di kelas, kualifikasi sebelumnya, dan nilai-nilai untuk mengevaluasi kinerja akademik siswa dan mengidentifikasi area yang memerlukan perbaikan.
+2. Melakukan Pengembangan Program Dukungan: Berdasarkan data tentang kebutuhan pendidikan khusus, status keuangan, dan kualifikasi orang tua, institusi dapat mengembangkan program-program dukungan yang sesuai untuk meningkatkan kesejahteraan dan kinerja siswa.
+3. Melakukan Pemantauan Pembayaran Uang Kuliah: Tinjau data tentang status keterlambatan pembayaran uang kuliah dan status utang siswa untuk memastikan ketersediaan sumber daya keuangan yang memadai bagi siswa dan menangani masalah keuangan yang mungkin mempengaruhi kelancaran pendidikan mereka.
+4. Analisis Dampak Faktor Ekonomi: Tinjau data tentang tingkat pengangguran, tingkat inflasi, dan GDP untuk memahami dampak faktor ekonomi terhadap pendidikan dan kesejahteraan siswa.
+5. Pengembangan Program Beasiswa: Berdasarkan data tentang penerima beasiswa, institusi dapat mengembangkan program beasiswa yang sesuai untuk mendukung siswa berprestasi dan berkebutuhan finansial.
