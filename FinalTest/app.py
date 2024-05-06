@@ -12,11 +12,7 @@ marital_status_options = ["1 - Single","2 - Married","3 - Widower","4 - Divorced
 previous_qualification_options = ['1 - Secondary education', "2 - Higher education - bachelor's degree", '3 - Higher education - degree', "4 - Higher education - master's", '5 - Higher education - doctorate', '6 - Frequency of higher education', '9 - 12th year of schooling - not completed', '10 - 11th year of schooling - not completed', '12 - Other - 11th year of schooling', '14 - 10th year of schooling', '15 - 10th year of schooling - not completed', '19 - Basic education 3rd cycle (9th/10th/11th year) or equiv.', '38 - Basic education 2nd cycle (6th/7th/8th year) or equiv.', '39 - Technological specialization course', '40 - Higher education - degree (1st cycle)', '42 - Professional higher technical course', '43 - Higher education - master (2nd cycle)']
 nacionality_options = ['1 - Portuguese', '2 - German', '6 - Spanish', '11 - Italian', '13 - Dutch', '14 - English', '17 - Lithuanian', '21 - Angolan', '22 - Cape Verdean', '24 - Guinean', '25 - Mozambican', '26 - Santomean', '32 - Turkish', '41 - Brazilian', '62 - Romanian', '100 - Moldova (Republic of)', '101 - Mexican', '103 - Ukrainian', '105 - Russian', '108 - Cuban', '109 - Colombian']
 
-col1, col2 = st.columns([1, 5])
-with col1:
-    st.image("https://github.com/dicodingacademy/assets/raw/main/logo.png", width=130)
-with col2:
-    st.header('Institutions App')
+st.header('Institutions App')
     
 
 data = []
