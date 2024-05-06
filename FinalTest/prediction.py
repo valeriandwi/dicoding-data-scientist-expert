@@ -1,7 +1,10 @@
 import joblib
+import os
 
-model = joblib.load("model/gboost_model.joblib")
-result_target = joblib.load("model/encoder_target.joblib")
+dirname = os.path.dirname(__file__)
+
+model = joblib.load(os.path.join(dirname, "model/gboost_model.joblib"))
+result_target = joblib.load(os.path.join(dirname, "model/encoder_target.joblib"))
 
 def prediction(data):
     """Making prediction
