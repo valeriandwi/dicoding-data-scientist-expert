@@ -51,6 +51,36 @@ Sumber data: https://raw.githubusercontent.com/dicodingacademy/dicoding_dataset/
 
 Setup environment:
 
+#### Library Installation
+
+1. Pastikan python sudah terinstall dalam device anda, untuk mengetahuinya dapat dengan membuka Command Prompt lalu ketik perintah seperti berikut
+
+```
+python --version
+```
+
+2. Jika sudah dipastikan bahwa python sudah terinstall dalam device anda, maka sekarang pastikan pip sudah terinstall dengan ketik perintah sebagai berikut di command prompt
+
+```
+pip --version
+```
+
+3. Jika sudah terinstall anda bisa melakukan install library-library yang dibutuhkan pada proyek ini dengan mengetik perintah berikut pada command prompt
+
+```
+pip install requirements.txt
+```
+
+#### Running Streamlit
+
+1. Pastikan semua library dan model joblib semua siap, lalu jalankan perintah berikut untuk menjalankan aplikasi prediksi pada proyek ini
+
+```
+streamlit run <path-to-app.py>
+```
+
+#### Running Metabase (Dashboard)
+
 1. Jalankan perintah berikut pada Terminal/Command Prompt/PowerShell guna memanggil (pull) Docker image untuk menjalankan Metabase.
 
 ```
@@ -75,27 +105,36 @@ Pada Jaya Jaya Institut terdapat total 4424 siswa, dimana 1421 siswa sudah dinya
 
 Adapun beberapa faktor yang dapat dilihat melalui dashboard yang dibuat, antara lain :
 
-1. Debtor : siswa yang melakukan pinjaman dari orang atau instansi lain dapat mengakibatkan dropout. Tindakan ini dapat mengakibatkan siswa mengalami financial stress, kesulitan mendapatkan resources seperti buku, bahan studi, atau teknologi, dan yang terakhir yaitu siswa akan rentan terhadap mental issue yang mengakibatkan ketakutan, depresi, dan merasa kekurangan harapan.
-2. Umur : siswa yang masih usia-usia awal masuk institut yaitu rentan usia 18 - 20 lebih banyak melakukan atau terkena dropout.
-3. Kategori aplikasi : Siswa yang mendaftar untuk kategori aplikasi siswa yang diatas umur 23 tahun banyak mengalami dropout
-4. Terdapat kolerasi antara Admission grade ( nilai masuk minimal pada program studi tertentu ) dan jumlah kurikulum yang diambil siswa pada semester 1 dan 2. Rata-rata siswa yang mengambil program studi yang memerlukan nilai tidak terlalu besar dan jumlah kurikulum yang kecil mengalami dropout.
-5. Program studi management di kelas regular dan karyawan merupakan program studi yang memiliki jumlah siswa dropout terbanyak.
-6. Siswa pada usia muda lebih memilih untuk mengambil jumlah kurikulum sedikit pada setiap semesternya
-7. Tingkat lulusan : Siswa yang baru lulus tingkat akhir (SMA) lebih rentan mengalami dropout
-8. GDP : Siswa yang mempunyai nilai GDP kecil lebih rentan mengalami dropout
+1. Debtor : siswa yang mempunyai hutang atau tunggakan. Sehingga dapat mengakibatkan siswa mengalami financial stress, kesulitan mendapatkan resources seperti buku, bahan studi, atau teknologi, dan yang terakhir yaitu siswa akan rentan terhadap mental issue yang mengakibatkan ketakutan, depresi, dan merasa kekurangan harapan.
+2. Umur : Siswa dengan usia muda lebih banyak mengalami dropout.
+3. Terdapat kolerasi antara Admission grade ( nilai masuk minimal pada program studi tertentu ) dan jumlah kurikulum yang diambil siswa pada semester 1 dan 2. Rata-rata siswa yang mengambil program studi yang memerlukan nilai tidak terlalu besar dan jumlah kurikulum yang kecil mengalami dropout.
+4. Program studi management di kelas regular dan karyawan merupakan program studi yang memiliki jumlah siswa dropout terbanyak.
+5. Siswa pada usia muda lebih memilih untuk mengambil jumlah kurikulum sedikit pada setiap semesternya
+6. Tingkat lulusan : Siswa yang baru lulus tingkat akhir (SMA) lebih rentan mengalami dropout
+7. GDP : Siswa yang mempunyai nilai GDP kecil lebih rentan mengalami dropout
 
 ## Menjalankan Sistem Machine Learning
 
-<picture>
-<img src="https://github.com/valeriandwi/dicoding-data-scientist-expert/blob/main/FinalTest/assets/prediction.png?raw=true">
-</picture>
+Untuk menjalankan sistem prediksi yang dibangun, pengguna harus memastikan sudah memasukan data sebenarnya. Dimana data yang perlu dimasukan dibagi menjadi beberapa section yaitu :
 
-Sistem prediksi yang dibangun menggunakan machine learning menggunakan Gradient Boosting model.
-Data siswa yang sudah dimasukan akan diolah untuk diprediksi statusnya dengan status antara lain :
+1. Personal Information, antara lain : Gender, Marital Status, Nacionality, Father Occupation, Father Qualification, Mother Occupation, Mother Qualification
+2. Application Information, antara lain : DayTime Evening Attendance, Previous Qualification, International Student, Application Mode, Course, Admission Grade, Previous Qualification Grade, Displaced, Education Special Needs
+3. Financial Information, antara lain : Debtor, Scholarship Holder, Tuition Fees Up To Date
+4. Student Progress, antara lain : Curricular Units 1st Sem & 2nd Sem Enrolled, Curricular Units 1st & 2nd Sem Evaluations, Curricular Units 1st Sem & 2nd Approved, Curricular Units 1st & 2nd Sem Grade, Applciation Order, Age at Enrollment, Unemployment Rate, Inflation Rate, GDP
+
+Lalu setelah keseluruhan data yang sudah diisi, pengguna dapat melihat data yang dimasukan pada table dengan menekan bagian _View the Raw Data_ menekan Tombol _Predict_ untuk melakukan prediksi menurut data yang sudah dimasukan.
+
+Perlu diketahui sitem prediksi yang dibangun menggunakan Gradient Boosting model.
+
+Dimana jika sistem berhasil melakukan prediksi, maka akan mengeluarkan status seperti berikut :
 
 1. Graduate : Siswa memiliki status lulus
 2. Enrolled : Siswa yang masih aktif menjalani akademik
 3. Dropout : Siswa yang sudah keluar dari kegiatan akademisi
+
+<picture>
+<img src="https://github.com/valeriandwi/dicoding-data-scientist-expert/blob/main/FinalTest/assets/prediction.png?raw=true">
+</picture>
 
 Sistem prediksi ini dapat dilihat pada link berikut :
 https://institution-valerian.streamlit.app/
