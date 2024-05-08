@@ -76,7 +76,7 @@ pip install requirements.txt
 1. Pastikan semua library dan model joblib semua siap, lalu jalankan perintah berikut untuk menjalankan aplikasi prediksi pada proyek ini
 
 ```
-streamlit run <path-to-app.py>
+streamlit run app.py
 ```
 
 #### Running Metabase (Dashboard)
@@ -165,11 +165,11 @@ Untuk mendalami dan memprediksi siswa yang rentan mengalami dropout, penulis mem
 - Inflation_rate
 - GDP
 
-1. Logistic Regression (accuracy : 68%)
-2. Decision Tree (accuracy : 66%)
-3. Random Forest (accuracy : 73%)
-4. Gradient Boosting (accuracy : 77%)
-5. XGBClassifier (accuracy : 76%)
+1. Logistic Regression (accuracy : 62%)
+2. Decision Tree (accuracy : 65%)
+3. Random Forest (accuracy : 76%)
+4. Gradient Boosting (accuracy : 91%)
+5. XGBClassifier (accuracy : 90%)
 
 Sehingga didapatkan bahwa model yang cocok untuk prediksi pada proyek ini yaitu Gradient Boosting. Dimana model tersebut menggunakan pc1_1 sebagai fitur utama dalam menghasilkan sebuah prediksi.
 
