@@ -8,3 +8,4 @@ sqlalchemy==2.0.29
 scikit-learn==1.4.2
 joblib==1.4.0
 streamlit==1.33.0
+flask
