@@ -137,7 +137,7 @@ Dimana jika sistem berhasil melakukan prediksi, maka akan mengeluarkan status se
 </picture>
 
 Sistem prediksi ini dapat dilihat pada link berikut :
-[https://institution-valerian.streamlit.app/](https://dicoding-data-scientist-expert-final.streamlit.app/)
+[https://dicoding-data-scientist-expert-final.streamlit.app/](https://dicoding-data-scientist-expert-final.streamlit.app/)
 
 ## Conclusion
 
